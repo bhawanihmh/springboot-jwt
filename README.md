@@ -13,3 +13,8 @@ Springboot-mvc with json web token using encription decription.
   "iss": "issuer",
   "exp": 1483227638000
 }
+
+
+# Demo steps:
+![home](https://user-images.githubusercontent.com/14869583/31545569-a29b4d3e-b03d-11e7-895c-475324ed54c8.jpg)
+
