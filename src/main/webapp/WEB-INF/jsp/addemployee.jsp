@@ -39,7 +39,8 @@
 		<table align="center">
 		<tr>
 			<td style="font-style: italic; color: red;">${message}</td>
+			
 		</tr>
-		</table>
+		</table>					
 	</body>
 </html>
