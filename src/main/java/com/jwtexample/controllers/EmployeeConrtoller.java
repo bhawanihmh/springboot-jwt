@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.jwtexample.jwt.JWTManager;
+import com.jwtexample.jwt.JwtHeaderTokenExtractor;
 import com.jwtexample.model.Employee;
 
 
@@ -39,7 +41,13 @@ public class EmployeeConrtoller {
 	@ResponseBody
 	public Employee addEmployee(@RequestBody Employee model, 
 			HttpServletRequest request) {
-		String accessToken = request.getHeader("Authorization");
+		
+		String accessToken = JwtHeaderTokenExtractor.extract(request.getHeader("Authorization"));
+				
+		if(JWTManager.validateJWToken(accessToken)){
+			LOGGER.info("accessToken is valid");
+		}
+		
 		LOGGER.info("Employee accessToken = " + accessToken);
 		LOGGER.info("Employee Name = " + model.getName());
 		LOGGER.info("Employee Salary = " + model.getSalary());
