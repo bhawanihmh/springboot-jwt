@@ -49,6 +49,7 @@ public class JWTManager {
 	public static synchronized boolean validateJWToken(String jwToken) {
 		
 		if(jwTokens.contains(jwToken)){
+			JWTUtil.parseJWT(jwToken, secretKey, signatureKey);
 			return true;			
 		}
 		return false;
