@@ -19,7 +19,7 @@ import com.jwtexample.services.impl.UserServiceImpl;
 
 /**
  * 
- * @author bhawani.singh
+ * @author bhawani.singh 
  *
  */
 
