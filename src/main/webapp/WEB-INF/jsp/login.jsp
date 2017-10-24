@@ -8,24 +8,27 @@
 <title>Login</title>
 </head>
 <body>
-	<form:form id="loginForm" modelAttribute="login" action="loginProcess"
-		method="post">
+	<script src="./resources/vendors/jquery.js"></script>
+	<script type="text/javascript" src="./resources/common/js/global.js"></script>
+	<%-- <form:form id="loginForm" modelAttribute="login" action="loginProcess"
+		method="post"> --%>
 		<table align="center">
 			<tr>
-				<td><form:label path="userName">Username: </form:label></td>
-				<td><form:input path="userName" name="userName" id="userName" />
+				<td><label path="userName">Username: </label></td>
+				<td><input path="userName" name="userName" id="userName" />
 				</td>
 			</tr>
 			<tr>
-				<td><form:label path="password">Password:</form:label></td>
-				<td><form:password path="password" name="password"
-						id="password" /></td>
+				<td><label path="password">Password:</label></td>
+				<td><input type="password" path="password" name="password" id="password" /></td>
 			</tr>
 			<tr></tr>
 			<tr>
 				<td></td>
-				<td align="left"><form:button id="login" name="login">Login</form:button>
+				<td><button id="loginProcess" name="loginProcess" onclick="Global.loginProcess()">Login</button>
 				</td>
+				<%-- <td align="left"><form:button id="login" name="login">Login</form:button>
+				</td> --%>
 			</tr>	
 			<tr></tr>
 			<tr></tr>	
@@ -35,7 +38,7 @@
 				<td><a href="/">Home</a></td>
 			</tr>		
 		</table>
-	</form:form>	
+	<%-- </form:form> --%>	
 	<table align="center">
 		<tr>
 			<td style="font-style: italic; color: red;">${message}</td>
