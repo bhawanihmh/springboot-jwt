@@ -86,15 +86,12 @@ var Global = (function(){
 					if (typeof(Storage) !== "undefined") {
 						localStorage.setItem("accessToken", accessToken);
 						logger.i(LOGIN, 'accessToken = ' + accessToken);
+						var url = BASE_URL + ModuleAJAXURL.SHOW_ADD_EMPLOYEE.url;		
+						logger.i(LOGIN, 'url = ' + url);
+						window.location.replace(url);
 					} else {
 						logger.i(LOGIN, 'Sorry! No Web Storage support..');
-					}				
-					
-					var url = BASE_URL + ModuleAJAXURL.SHOW_ADD_EMPLOYEE.url;		
-					logger.i(LOGIN, 'url = ' + url);
-					window.location.replace(url);					
-							
-					logger.i(LOGIN, 'After loadAddEmployee method! ');
+					}					
 				} catch (exception) {
 					logger.i(LOGIN, 'Exception! ' + exception);
 				}
